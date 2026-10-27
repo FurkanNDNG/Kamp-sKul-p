@@ -7,7 +7,7 @@ aksu@bartin.edu.tr
 
 ## İlk kez çalıştırma
 1. GitHub hesabında `kampus-kulubu` adlı repository oluştur. Add README seçeneğini aç.
-2. ZIP'i aç. `index.html`, `etkinlikler.html`, `hakkimizda.html`, `style.css` ve `README.md` dosyalarını repository köküne yükle (Add file / Upload files). ZIP dosyasının kendisini yükleme.
+2. ZIP'i aç. `index.html`, `etkinlikler.html`, `hakkimizda.html`, `style.css`, `script.js` ve `README.md` dosyalarını repository köküne yükle (Add file / Upload files). `Image` klasörünü de içindeki kulüp logolarıyla birlikte yükle. ZIP dosyasının kendisini yükleme.
 3. Commit changes ile kaydet.
 4. Code / Codespaces / Create codespace on main seç. Kurulumun bitmesini bekle.
 5. Terminal / New Terminal aç. Aşağıdaki komutu çalıştır:
@@ -18,7 +18,7 @@ python3 -m http.server 8000 --bind 0.0.0.0
 
 6. Ports panelinde 8000 portunu bul. Gerekirse Forward a Port ile 8000 ekle. Open in Browser seç. Port Private kalabilir.
 7. Ana Sayfa, Etkinlikler ve Hakkımızda bağlantılarını dene.
-8. HTML/CSS değişikliğinden sonra dosyayı kaydet (Ctrl+S veya Mac'te Cmd+S), browser sayfasını yenile.
+8. HTML/CSS/JavaScript değişikliğinden sonra dosyayı kaydet (Ctrl+S veya Mac'te Cmd+S), browser sayfasını yenile.
 
 Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontrol et. Bu projede npm, framework, database veya uygulama kurulumu gerekmez. Python yalnızca hazır dosyaları sunar. Yerel bilgisayarda HTML dosyalarını çift tıklayarak da açabilirsin.
 
@@ -27,6 +27,8 @@ Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontro
 - etkinlikler.html: 15 örnek etkinlik
 - hakkimizda.html: Proje tanıtımı
 - style.css: Ortak renkler, sayfa düzeni ve mobil görünüm
+- script.js: Ana sayfa ve etkinlik arama filtreleri
+- Image/: Kulüp logoları
 
 ## Copilot alıştırması
 Önce dosyayı aç. Chat içinde şunu sor:
@@ -35,7 +37,7 @@ Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontro
 
 Sonra şu küçük değişikliği iste:
 
-> Yalnızca etkinlikler.html dosyasına mevcut article yapısını kullanarak bir GitHub Atölyesi ekle. Tarihi 11 Mart, saati 14.00 ve yeri Bilgisayar Laboratuvarı olsun. Yeni paket veya JavaScript ekleme. Değişen satırları açıkla.
+> Yalnızca etkinlikler.html dosyasına mevcut article yapısını kullanarak bir GitHub Atölyesi ekle. Tarihi 24 Nisan 2027, saati 14.00 ve yeri Bilgisayar Laboratuvarı olsun. Yeni paket veya JavaScript ekleme. Değişen satırları açıkla.
 
 Öneriyi oku. On altı etkinliğin göründüğünü ve diğer sayfaların açıldığını kontrol et. AI_NOTLARI.md dosyasına hangi yardımı aldığını ve nasıl test ettiğini yaz. Copilot erişimin yoksa bir article bloğunu kendin çoğalt.
 

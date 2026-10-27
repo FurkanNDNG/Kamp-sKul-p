@@ -5,45 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana Sayfa | Bartın Üniversitesi Kulüpleri</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="brand">Bartın Üniversitesi kulüpleri,</div><nav aria-label="Ana menü"><a href="index.html" aria-current="page">Ana Sayfa</a>
+<header><div class="brand">Bartın Üniversitesi Kulüpleri</div><nav aria-label="Ana menü"><a href="index.html" aria-current="page">Ana Sayfa</a>
 <a href="etkinlikler.html">Etkinlikler</a>
 <a href="hakkimizda.html">Hakkımızda</a></nav></header>
 <section class="site-search" role="search" aria-label="Ana sayfa araması">
   <input id="homepage-search" type="search" aria-label="Ara" placeholder="Ara">
 </section>
-<main><p class="eyebrow">BPR201 ÖĞRENCİ PROJESİ</p>
+<main><p class="eyebrow">KULÜPLERİ KEŞFET</p>
 <h1>Birlikte öğrenelim.<br>Birlikte üretelim.</h1>
-<p class="intro">Kampüs Kulübü, web geliştirmeye ilk adımını atan öğrencileri bir araya getirir. Atölyelerimizi keşfet, kendi projen için ilham bul.</p>
+<p class="intro">Bartın Üniversitesi kulüplerini keşfet, ilgini çeken topluluğu bul ve kampüs yaşamına katıl.</p>
 <a class="button" href="etkinlikler.html">Etkinlikleri keşfet</a>
 <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
 <section class="grid" aria-label="Kulüp çalışma alanları">
-<article><p class="meta">01 / ÖĞREN</p><h2>Web temelleri</h2><p>HTML ile içeriği kur. CSS ile görünümü düzenle.</p></article>
-<article><p class="meta">02 / DENE</p><h2>Küçük projeler</h2><p>Browser içinde çalışan ilk siteni geliştir.</p></article>
-<article><p class="meta">03 / PAYLAŞ</p><h2>Birlikte gelişim</h2><p>Kodunu GitHub üzerinde paylaş ve geri bildirim al.</p></article>
-<article><p class="meta">04 / GELİŞTİR</p><h2>JavaScript'e ilk adım</h2><p>Sayfana küçük etkileşimler ekle ve tarayıcıda dene.</p></article>
-<article><p class="meta">05 / TASARLA</p><h2>Erişilebilir arayüzler</h2><p>Renk, kontrast ve klavye desteğiyle herkes için tasarla.</p></article>
-<article><p class="meta">06 / PAYLAŞ</p><h2>Git ile ekip çalışması</h2><p>Değişikliklerini takip et ve fikirlerini ekibinle paylaş.</p></article>
+<article><img class="club-logo" src="Image/Bahcecilik_Kulubu.jpg" alt="Bahçecilik Kulübü logosu" loading="lazy"><h2>Bahçecilik Kulübü</h2><p>Doğayla üret, kampüsünde yeşil bir iz bırak.</p></article>
+<article><img class="club-logo" src="Image/Bilim_ve_Teknolojileri_Kulubu.jpg" alt="Bilim ve Teknolojileri Kulübü logosu" loading="lazy"><h2>Bilim ve Teknolojileri Kulübü</h2><p>Merak et, dene, bilimi ve teknolojiyi birlikte keşfet.</p></article>
+<article><img class="club-logo club-logo-blend" src="Image/Edebiyat_Kulubu.jpg" alt="Edebiyat Kulübü logosu" loading="lazy"><h2>Edebiyat Kulübü</h2><p>Oku, yaz, paylaş; sözcüklerle yeni dünyalar kur.</p></article>
+<article><img class="club-logo" src="Image/Go_Kart_Kulubu.jpg" alt="Go-Kart Kulübü logosu" loading="lazy"><h2>Go-Kart Kulübü</h2><p>Güvenli sürüşü, heyecanı ve takım ruhunu buluştur.</p></article>
+<article><img class="club-logo club-logo-blend" src="Image/Oyun_ve_Gelistirme_Kulubu.jpg" alt="Oyun ve Geliştirme Kulübü logosu" loading="lazy"><h2>Oyun ve Geliştirme Kulübü</h2><p>Oyun fikirlerini tasarla, geliştir ve birlikte oyna.</p></article>
+<article><img class="club-logo" src="Image/Spor_Kulübü.jpg" alt="Spor Kulübü logosu" loading="lazy"><h2>Spor Kulübü</h2><p>Hareket et, takım ol, birlikte daha ileri git.</p></article>
 </section></main>
-<footer>BPR201 - İnternet Tabanlı Programlama / Eğitim amaçlı örnek proje</footer>
-<script>
-const searchInput = document.querySelector('#homepage-search');
-const searchStatus = document.querySelector('#search-status');
-const activityCards = [...document.querySelectorAll('.grid article')];
-
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.trim().toLocaleLowerCase('tr-TR');
-  let visibleCount = 0;
-
-  activityCards.forEach((card) => {
-    const matches = card.textContent.toLocaleLowerCase('tr-TR').includes(query);
-    card.hidden = !matches;
-    if (matches) visibleCount += 1;
-  });
-
-  searchStatus.textContent = query ? `${visibleCount} sonuç bulundu.` : '';
-});
-</script>
+<footer>Bartın Üniversitesi Kulüpleri | Öğrenci toplulukları ve kampüs etkinlikleri</footer>
 </body>
 </html>

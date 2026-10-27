@@ -5,52 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etkinlikler | Bartın Üniversitesi Kulüpleri</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="brand">Bartın Üniversitesi kulüpleri,</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
+<header><div class="brand">Bartın Üniversitesi Kulüpleri</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
 <a href="etkinlikler.html" aria-current="page">Etkinlikler</a>
 <a href="hakkimizda.html">Hakkımızda</a></nav></header>
 <section class="site-search" role="search" aria-label="Etkinlik araması">
   <input id="event-search" type="search" aria-label="Ara" placeholder="Ara">
 </section>
-<main><p class="eyebrow">BARTIN ÜNİVERSİTESİ KULÜPLERİ</p><h1>Etkinlik takvimi</h1>
-<p class="intro">Yıl boyunca düzenlenen atölye ve buluşmalar. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
+<main><p class="eyebrow">ATÖLYELER VE BULUŞMALAR</p><h1>Etkinlik takvimi</h1>
+<p class="intro">Kulüplerin atölye ve buluşmalarını keşfet. Tarihler eğitim amacıyla hazırlanmış örnek etkinliklerdir.</p>
 <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
 <section class="grid" aria-label="Örnek etkinlikler">
-<article><p class="meta">12 KASIM / 14.00</p><h2>HTML Atölyesi</h2><p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">19 KASIM / 14.00</p><h2>CSS Tasarım Saati</h2><p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">26 KASIM / 14.00</p><h2>Copilot ile Kod Okuma</h2><p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p><p>Yer: Çevrim içi buluşma</p></article>
-<article><p class="meta">03 ARALIK / 14.00</p><h2>Git ve GitHub Temelleri</h2><p>Değişikliklerini kaydet ve projenin sürümlerini takip et.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">10 ARALIK / 14.00</p><h2>JavaScript'e Giriş</h2><p>Değişkenler ve olaylarla sayfana etkileşim ekle.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">17 ARALIK / 14.00</p><h2>Duyarlı Sayfa Tasarımı</h2><p>Farklı ekran boyutlarına uyumlu düzenler oluştur.</p><p>Yer: Çevrim içi buluşma</p></article>
-<article><p class="meta">07 OCAK / 14.00</p><h2>CSS Grid Atölyesi</h2><p>Kartları ve içerikleri düzenli bir ızgaraya yerleştir.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">14 OCAK / 14.00</p><h2>Erişilebilirlik Buluşması</h2><p>Klavye kullanımı, etiketler ve kontrast üzerine çalış.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">21 OCAK / 14.00</p><h2>Tarayıcı Araçları</h2><p>Geliştirici araçlarıyla sayfanı incele ve hataları bul.</p><p>Yer: Çevrim içi buluşma</p></article>
-<article><p class="meta">28 OCAK / 14.00</p><h2>Web Formları</h2><p>Etiketleri ve alanları kullanarak anlaşılır formlar tasarla.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">04 ŞUBAT / 14.00</p><h2>Kişisel Portfolyo</h2><p>Çalışmalarını tanıtan sade bir portfolyo sayfası hazırla.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">11 ŞUBAT / 14.00</p><h2>GitHub Pages ile Yayınlama</h2><p>Statik web siteni çevrim içi paylaşmayı öğren.</p><p>Yer: Çevrim içi buluşma</p></article>
-<article><p class="meta">18 ŞUBAT / 14.00</p><h2>Renk ve Tipografi</h2><p>Okunabilir ve tutarlı bir görsel dil oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">25 ŞUBAT / 14.00</p><h2>Mini Proje Atölyesi</h2><p>Küçük bir fikri ekipçe çalışan bir sayfaya dönüştür.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">04 MART / 14.00</p><h2>Proje Paylaşım Günü</h2><p>Ürettiklerini tanıt ve arkadaşlarından geri bildirim al.</p><p>Yer: Çevrim içi buluşma</p></article>
-</section><p class="note">Bu sayfa statiktir. Etkinlik eklemek için HTML dosyasını düzenleriz.</p></main>
-<footer>BPR201 - İnternet Tabanlı Programlama / Eğitim amaçlı örnek proje</footer>
-<script>
-const searchInput = document.querySelector('#event-search');
-const searchStatus = document.querySelector('#search-status');
-const eventCards = [...document.querySelectorAll('.grid article')];
-
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.trim().toLocaleLowerCase('tr-TR');
-  let visibleCount = 0;
-
-  eventCards.forEach((card) => {
-    const matches = card.textContent.toLocaleLowerCase('tr-TR').includes(query);
-    card.hidden = !matches;
-    if (matches) visibleCount += 1;
-  });
-
-  searchStatus.textContent = query ? `${visibleCount} sonuç bulundu.` : '';
-});
-</script>
+<article><div class="event-heading"><img class="event-logo" src="Image/Bahcecilik_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">31 EKİM 2026 / 14.00<br>BAHÇECİLİK KULÜBÜ</p><h2>Kampüs Bitkilerini Tanıyalım</h2></div></div><p>Kampüs bahçesindeki bitkileri keşfet ve bakım önerilerini öğren.</p><p>Yer: Kampüs bahçesi</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Bahcecilik_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">14 KASIM 2026 / 14.00<br>BAHÇECİLİK KULÜBÜ</p><h2>Kışlık Saksı Atölyesi</h2></div></div><p>Kışa uygun bitkilerle kendi küçük saksı bahçeni hazırla.</p><p>Yer: Uygulama serası</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Bilim_ve_Teknolojileri_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">21 KASIM 2026 / 14.00<br>BİLİM VE TEKNOLOJİLERİ KULÜBÜ</p><h2>Meraklı Zihinler: Deney Günü</h2></div></div><p>Günlük bilim sorularını basit ve güvenli deneylerle araştır.</p><p>Yer: Fen laboratuvarı</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Bilim_ve_Teknolojileri_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">05 ARALIK 2026 / 14.00<br>BİLİM VE TEKNOLOJİLERİ KULÜBÜ</p><h2>Teknoloji Fikirleri Buluşması</h2></div></div><p>Kampüs yaşamını kolaylaştıracak teknoloji fikirleri geliştir.</p><p>Yer: Bilgisayar laboratuvarı</p></article>
+<article><div class="event-heading"><img class="event-logo club-logo-blend" src="Image/Edebiyat_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">12 ARALIK 2026 / 14.00<br>EDEBİYAT KULÜBÜ</p><h2>Kampüste Okuma Saati</h2></div></div><p>Seçtiğin bir metni paylaş, farklı yorumları birlikte konuş.</p><p>Yer: Kütüphane salonu</p></article>
+<article><div class="event-heading"><img class="event-logo club-logo-blend" src="Image/Edebiyat_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">09 OCAK 2027 / 14.00<br>EDEBİYAT KULÜBÜ</p><h2>Yaratıcı Yazarlık Atölyesi</h2></div></div><p>Kısa öykü çalışmalarıyla anlatımını ve hayal gücünü geliştir.</p><p>Yer: Kütüphane salonu</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Go_Kart_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">16 OCAK 2027 / 14.00<br>GO-KART KULÜBÜ</p><h2>Pistte Güvenli Sürüş</h2></div></div><p>Pist kurallarını ve temel güvenli sürüş ilkelerini tanı.</p><p>Yer: Go-kart pisti</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Go_Kart_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">30 OCAK 2027 / 14.00<br>GO-KART KULÜBÜ</p><h2>Go-Kart Takım Buluşması</h2></div></div><p>Takım arkadaşlarınla tanış, strateji ve koordinasyon çalış.</p><p>Yer: Go-kart pisti</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Oyun_ve_Gelistirme_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">06 ŞUBAT 2027 / 14.00<br>OYUN VE GELİŞTİRME KULÜBÜ</p><h2>Oyun Fikri Tasarım Atölyesi</h2></div></div><p>Bir oyun fikrini karakter, hedef ve kurallarıyla tasarla.</p><p>Yer: Tasarım sınıfı</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Oyun_ve_Gelistirme_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">13 ŞUBAT 2027 / 14.00<br>OYUN VE GELİŞTİRME KULÜBÜ</p><h2>İlk 2B Oyun Projem</h2></div></div><p>Basit bir oyun prototipinin adımlarını birlikte planla.</p><p>Yer: Bilgisayar laboratuvarı</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Spor_Kulübü.jpg" alt="" loading="lazy"><div><p class="meta">20 ŞUBAT 2027 / 14.00<br>SPOR KULÜBÜ</p><h2>Kampüs Sporları Tanıtım Günü</h2></div></div><p>Kulüp takımlarını tanı ve ilgilendiğin branşı keşfet.</p><p>Yer: Çok amaçlı salon</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Spor_Kulübü.jpg" alt="" loading="lazy"><div><p class="meta">06 MART 2027 / 14.00<br>SPOR KULÜBÜ</p><h2>Dostluk Voleybol Turnuvası</h2></div></div><p>Takım ruhunu sahaya taşı ve dostluk maçlarına katıl.</p><p>Yer: Spor salonu</p></article>
+<article><div class="event-heading"><img class="event-logo club-logo-blend" src="Image/Edebiyat_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">27 MART 2027 / 14.00<br>EDEBİYAT KULÜBÜ</p><h2>Şiir Dinletisi ve Açık Mikrofon</h2></div></div><p>Sevdiğin dizeleri oku veya kendi yazdıklarını paylaş.</p><p>Yer: Kütüphane salonu</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Go_Kart_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">03 NİSAN 2027 / 14.00<br>GO-KART KULÜBÜ</p><h2>Pist Stratejisi Buluşması</h2></div></div><p>Viraj, tempo ve takım içi iletişim üzerine konuş.</p><p>Yer: Go-kart pisti</p></article>
+<article><div class="event-heading"><img class="event-logo" src="Image/Oyun_ve_Gelistirme_Kulubu.jpg" alt="" loading="lazy"><div><p class="meta">10 NİSAN 2027 / 14.00<br>OYUN VE GELİŞTİRME KULÜBÜ</p><h2>Oyun Testi ve Geri Bildirim Günü</h2></div></div><p>Prototipleri dene, yapıcı geri bildirimlerle geliştir.</p><p>Yer: Bilgisayar laboratuvarı</p></article>
+</section><p class="note">Etkinlik başlıkları, tarihler ve yer bilgileri örnek içeriktir; güncel duyurular için ilgili kulüpleri takip et.</p>
+</main>
+<footer>Bartın Üniversitesi Kulüpleri | Öğrenci toplulukları ve kampüs etkinlikleri</footer>
 </body>
 </html>
