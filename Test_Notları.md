@@ -1,20 +1,13 @@
 
-1. İstenen: Ana sayfanın en üstüne sayfa genişliğinde arama eklenmesi. Elde edilen: Arama alanı eklendi; çalışma alanı kartları Türkçe karakterleri dikkate alarak filtreleniyor ve eşleşme sayısı gösteriliyor. Yeni framework veya paket eklenmedi. JavaScript sözdizimi, `git diff --check` ve editör hata kontrolleri başarılı; tarayıcıda manuel test yapılmadı.
-2. İstenen: Arama alanının header altına taşınması ve sayfa tasarımıyla uyumlu olması. Elde edilen: Arama header'ın hemen altına alındı; renkleri, kenarlıkları ve yatay boşlukları ortak tasarımla eşleştirildi.
-3. İstenen: Arama alanının “Sitede ara” olarak adlandırılması, alt çizginin kaldırılması, header ve kart üst çizgilerinin mavi olması ve hover renginin hafifçe değişmesi. Elde edilen: İstenen renk ve yerleşim düzenlemeleri yapıldı; kart hover'ında çok hafif mavi arka plan kullanıldı.
-4. İstenen: “Sitede ara” yazısının kaldırılması ve arama kutusunda yalnızca “Ara” yazması. Elde edilen: Görünür etiket kaldırıldı; yer tutucu ve erişilebilir etiket “Ara” olarak ayarlandı.
-5. İstenen: Ana sayfadaki arama çubuğunun Etkinlikler sayfasına da eklenmesi. Elde edilen: Aynı görünümlü arama eklendi; etkinlik kartları Türkçe karakterleri dikkate alarak filtreleniyor ve eşleşme sayısı gösteriliyor. Yeni framework veya paket eklenmedi.
-6. İstenen: İki arama çubuğunun sayfa boyutuna göre daha iyi konumlandırılması. Elde edilen: Arama alanları ana içerikle aynı 1100px maksimum genişliğe ve 24px iç kenar boşluğuna hizalandı; böylece geniş ekranda içerik kolonundan taşmıyor, dar ekranda kenar boşluğunu koruyor.
-7. İstenen: Ana sayfadaki üç makalenin hemen altına üç makale daha eklenmesi. Elde edilen: JavaScript'e ilk adım, erişilebilir arayüzler ve Git ile ekip çalışması kartları eklendi; grid sıralamasıyla ikinci satırda görünüyor ve arama kapsamına dahil.
-8. İstenen: Site markasının “Bartın Üniversitesi kulüpleri,” olarak değiştirilip ortalanması ve Etkinlikler sayfasına 12 article eklenmesi. Elde edilen: Marka üç sayfada güncellendi ve ortalandı; Etkinlikler sayfasına 12 yeni kart eklendi (toplam 15), arama kapsamına dahil edildi.
-9. İstenen: Marka başlığındaki yazımın düzeltilmesi ve virgülün kaldırılması. Elde edilen: Üç sayfanın header markası ve Hakkımızda başlığı “Bartın Üniversitesi Kulüpleri” olarak düzenlendi.
-10. İstenen: Fotoğraflardaki kulüplere göre ana sayfaya logolu kulüp kartları ve etkinlik sayfasına eğitim yılı içinde örnek etkinlikler eklenmesi. Elde edilen: Altı logo kartlarda kullanıldı; 15 etkinlik 2026-27 dönemine yayıldı ve kulüplerle ilişkilendirildi.
-11. İstenen: Edebiyat ve Oyun ve Geliştirme logolarının beyaz arka planını kart beyazıyla eşleştirmek. Elde edilen: İki logoya özel blend görünümü eklendi; JPEG dosyaları değiştirilmeden açık arka planları kartla bütünleştirildi.
-12. İstenen: Yeşil küçük metinlerin sayfa içeriğiyle uyumlu olması. Elde edilen: Sayfa üstü etiketleri ve Hakkımızda kart etiketleri ilgili içerikleri daha doğru anlatacak şekilde güncellendi; tarih ve kulüp adlarını belirten etkinlik etiketleri korundu.
-13. İstenen: Hakkımızda sayfasının kulüp sitesiyle uyumlu içeriklerle doldurulması. Elde edilen: Kulüp çeşitliliği, etkinliklerde birlikte üretim ve katılımı anlatan üç kart ile örnek içerik notu eklendi.
-14. İstenen: Ders/proje odaklı metinlerin kulüp sitesiyle uyumlu hale getirilmesi ve etkinliklerde görsel kullanımı. Elde edilen: Altbilgiler ve etkinlik notu kulüp içeriğine göre düzenlendi; her etkinlik kartına ilgili kulüp logosu küçük görsel olarak eklendi.
-15. İstenen: Arama JavaScript kodunun satır içinden `.js` dosyasına taşınması. Elde edilen: İki sayfa ortak `script.js` dosyasını `defer` ile yüklüyor; arama filtreleme davranışı korunuyor.
-17. İstenen: Etkinlik sayfasında sağ ve sol kenarlarda, sayfa boyunca uzanan görsel bölümleri oluşturulması. Elde edilen: Yan görseller 160x130px boyutuna çıkarıldı ve ortadaki metinden en az 20px boşluk bırakıldı; merkez 1100px kaldı. Görseller dar ekranlarda çakışmayı önlemek için gizleniyor.
-18. İstenen: Bilim ve Teknoloji Kulübü için diğer fotoğrafın seçilmesi. Elde edilen: Ana sayfa, etkinlik kartları ve yan görsel alanı `Bilim_ve_Teknolojileri_Kulubu.jpg` dosyasına yönlendirildi.
-19. İstenen: Kulüp fotoğraflarının daire dışındaki beyaz alanlarının sayfayla uyumlu olması. Elde edilen: Ana sayfa, etkinlik kartları ve kenar görsellerindeki tüm logolara arka planla harmanlama uygulandı; görsel dosyaları değiştirilmedi.
-20. İstenen: Etkinlik sayfasındaki yalnızca sağ ve sol fotoğraf alanlarının kaldırılması. Elde edilen: İki yan sütundaki altı fotoğraf ve ilgili stiller kaldırıldı; etkinlik article görselleri korundu.
+# Test İşlemleri
+
+Arama senaryoları `script.js` üzerinde Node.js ile sahte DOM kullanılarak doğrulandı. Sayfa bağlantıları yerel HTTP sunucusunda kontrol edildi. Mobil görünüm ve klavye odağı için CSS kuralları incelendi; gerçek cihazda manuel Tab testi yapılmadı.
+
+| # | Test | Beklenen sonuç | Gerçekleşen sonuç |
+|---|---|---|---|
+| 1 | Başlığın tamamını veya bir bölümünü arama | Yalnızca eşleşen kart görünür ve sayaç doğru sayıyı gösterir. | Ana sayfada “Bahçe”, etkinliklerde “Okuma” aramalarında birer eşleşme ve doğru sayaç görüldü. |
+| 2 | Aynı ifadeyi büyük ve küçük harfle arama | Her iki aramada aynı kartlar görünür. | “Okuma” ve “okuma” aynı kartı ve sayacı verdi. |
+| 3 | Eşleşmeyen ifade arama | Sayaç 0 olur ve sonuç bulunmadığını bildirir. | Sayaç 0 oldu ve “0 sonuç bulundu.” mesajı üretildi. |
+| 4 | Boşluk yazma veya aramayı temizleme | Tüm kartlar görünür, sonuç mesajı temizlenir. | Boşluk ve boş arama girişinde tüm kartlar geri geldi, mesaj temizlendi. |
+| 5 | Üç sayfanın menü bağlantılarını açma | Tüm sayfalar doğru şekilde açılır. | `index.html`, `etkinlikler.html` ve `hakkimizda.html` HTTP 200 yanıtladı. |
+| 6 | 390px görünüm ve klavye odağı | Yatay taşma olmaz; arama alanında görünür odak bulunur. | Mobil tek sütun ve `focus-visible` CSS kuralları mevcut. Gerçek cihazda ve Tab ile manuel kontrol yapılmadı. |

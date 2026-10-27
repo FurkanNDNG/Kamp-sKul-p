@@ -7,7 +7,7 @@ aksu@bartin.edu.tr
 
 ## İlk kez çalıştırma
 1. GitHub hesabında `kampus-kulubu` adlı repository oluştur. Add README seçeneğini aç.
-2. ZIP'i aç. `index.html`, `etkinlikler.html`, `hakkimizda.html`, `style.css`, `script.js` ve `README.md` dosyalarını repository köküne yükle (Add file / Upload files). `Image` klasörünü de içindeki kulüp logolarıyla birlikte yükle. ZIP dosyasının kendisini yükleme.
+2. ZIP'i aç. `index.html`, `etkinlikler.html`, `hakkimizda.html`, `style.css`, `script.js`, `README.md`, `AI_NOTLARI.md` ve `Test_Notları.md` dosyalarını repository köküne yükle (Add file / Upload files). `Image` klasörünü de içindeki kulüp logolarıyla birlikte yükle. ZIP dosyasının kendisini yükleme.
 3. Commit changes ile kaydet.
 4. Code / Codespaces / Create codespace on main seç. Kurulumun bitmesini bekle.
 5. Terminal / New Terminal aç. Aşağıdaki komutu çalıştır:
@@ -29,6 +29,8 @@ Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontro
 - style.css: Ortak renkler, sayfa düzeni ve mobil görünüm
 - script.js: Ana sayfa ve etkinlik arama filtreleri
 - Image/: Kulüp logoları
+- AI_NOTLARI.md: Yapılan değişikliklerin özeti
+- Test_Notları.md: İstek ve doğrulama notları
 
 ## Copilot alıştırması
 Önce dosyayı aç. Chat içinde şunu sor:
