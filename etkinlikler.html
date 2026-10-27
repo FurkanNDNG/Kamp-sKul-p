@@ -3,20 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etkinlikler | Kampüs Kulübü</title>
+  <title>Etkinlikler | Bartın Üniversitesi Kulüpleri</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="brand">Kampüs Kulübü</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
+<header><div class="brand">Bartın Üniversitesi kulüpleri,</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
 <a href="etkinlikler.html" aria-current="page">Etkinlikler</a>
 <a href="hakkimizda.html">Hakkımızda</a></nav></header>
-<main><p class="eyebrow">KAMPÜS KULÜBÜ</p><h1>Etkinlik takvimi</h1>
-<p class="intro">İlk projen için üç buluşma. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
+<section class="site-search" role="search" aria-label="Etkinlik araması">
+  <input id="event-search" type="search" aria-label="Ara" placeholder="Ara">
+</section>
+<main><p class="eyebrow">BARTIN ÜNİVERSİTESİ KULÜPLERİ</p><h1>Etkinlik takvimi</h1>
+<p class="intro">Yıl boyunca düzenlenen atölye ve buluşmalar. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
+<p class="search-status" id="search-status" role="status" aria-live="polite"></p>
 <section class="grid" aria-label="Örnek etkinlikler">
 <article><p class="meta">12 KASIM / 14.00</p><h2>HTML Atölyesi</h2><p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
 <article><p class="meta">19 KASIM / 14.00</p><h2>CSS Tasarım Saati</h2><p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
 <article><p class="meta">26 KASIM / 14.00</p><h2>Copilot ile Kod Okuma</h2><p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p><p>Yer: Çevrim içi buluşma</p></article>
+<article><p class="meta">03 ARALIK / 14.00</p><h2>Git ve GitHub Temelleri</h2><p>Değişikliklerini kaydet ve projenin sürümlerini takip et.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">10 ARALIK / 14.00</p><h2>JavaScript'e Giriş</h2><p>Değişkenler ve olaylarla sayfana etkileşim ekle.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">17 ARALIK / 14.00</p><h2>Duyarlı Sayfa Tasarımı</h2><p>Farklı ekran boyutlarına uyumlu düzenler oluştur.</p><p>Yer: Çevrim içi buluşma</p></article>
+<article><p class="meta">07 OCAK / 14.00</p><h2>CSS Grid Atölyesi</h2><p>Kartları ve içerikleri düzenli bir ızgaraya yerleştir.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">14 OCAK / 14.00</p><h2>Erişilebilirlik Buluşması</h2><p>Klavye kullanımı, etiketler ve kontrast üzerine çalış.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">21 OCAK / 14.00</p><h2>Tarayıcı Araçları</h2><p>Geliştirici araçlarıyla sayfanı incele ve hataları bul.</p><p>Yer: Çevrim içi buluşma</p></article>
+<article><p class="meta">28 OCAK / 14.00</p><h2>Web Formları</h2><p>Etiketleri ve alanları kullanarak anlaşılır formlar tasarla.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">04 ŞUBAT / 14.00</p><h2>Kişisel Portfolyo</h2><p>Çalışmalarını tanıtan sade bir portfolyo sayfası hazırla.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">11 ŞUBAT / 14.00</p><h2>GitHub Pages ile Yayınlama</h2><p>Statik web siteni çevrim içi paylaşmayı öğren.</p><p>Yer: Çevrim içi buluşma</p></article>
+<article><p class="meta">18 ŞUBAT / 14.00</p><h2>Renk ve Tipografi</h2><p>Okunabilir ve tutarlı bir görsel dil oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">25 ŞUBAT / 14.00</p><h2>Mini Proje Atölyesi</h2><p>Küçük bir fikri ekipçe çalışan bir sayfaya dönüştür.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
+<article><p class="meta">04 MART / 14.00</p><h2>Proje Paylaşım Günü</h2><p>Ürettiklerini tanıt ve arkadaşlarından geri bildirim al.</p><p>Yer: Çevrim içi buluşma</p></article>
 </section><p class="note">Bu sayfa statiktir. Etkinlik eklemek için HTML dosyasını düzenleriz.</p></main>
 <footer>BPR201 - İnternet Tabanlı Programlama / Eğitim amaçlı örnek proje</footer>
+<script>
+const searchInput = document.querySelector('#event-search');
+const searchStatus = document.querySelector('#search-status');
+const eventCards = [...document.querySelectorAll('.grid article')];
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLocaleLowerCase('tr-TR');
+  let visibleCount = 0;
+
+  eventCards.forEach((card) => {
+    const matches = card.textContent.toLocaleLowerCase('tr-TR').includes(query);
+    card.hidden = !matches;
+    if (matches) visibleCount += 1;
+  });
+
+  searchStatus.textContent = query ? `${visibleCount} sonuç bulundu.` : '';
+});
+</script>
 </body>
 </html>

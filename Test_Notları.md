@@ -1,0 +1,10 @@
+# Test Notları
+
+1. İstenen: Ana sayfanın en üstüne sayfa genişliğinde arama eklenmesi. Elde edilen: Arama alanı eklendi; çalışma alanı kartları Türkçe karakterleri dikkate alarak filtreleniyor ve eşleşme sayısı gösteriliyor. Yeni framework veya paket eklenmedi. JavaScript sözdizimi, `git diff --check` ve editör hata kontrolleri başarılı; tarayıcıda manuel test yapılmadı.
+2. İstenen: Arama alanının header altına taşınması ve sayfa tasarımıyla uyumlu olması. Elde edilen: Arama header'ın hemen altına alındı; renkleri, kenarlıkları ve yatay boşlukları ortak tasarımla eşleştirildi.
+3. İstenen: Arama alanının “Sitede ara” olarak adlandırılması, alt çizginin kaldırılması, header ve kart üst çizgilerinin mavi olması ve hover renginin hafifçe değişmesi. Elde edilen: İstenen renk ve yerleşim düzenlemeleri yapıldı; kart hover'ında çok hafif mavi arka plan kullanıldı.
+4. İstenen: “Sitede ara” yazısının kaldırılması ve arama kutusunda yalnızca “Ara” yazması. Elde edilen: Görünür etiket kaldırıldı; yer tutucu ve erişilebilir etiket “Ara” olarak ayarlandı.
+5. İstenen: Ana sayfadaki arama çubuğunun Etkinlikler sayfasına da eklenmesi. Elde edilen: Aynı görünümlü arama eklendi; etkinlik kartları Türkçe karakterleri dikkate alarak filtreleniyor ve eşleşme sayısı gösteriliyor. Yeni framework veya paket eklenmedi.
+6. İstenen: İki arama çubuğunun sayfa boyutuna göre daha iyi konumlandırılması. Elde edilen: Arama alanları ana içerikle aynı 1100px maksimum genişliğe ve 24px iç kenar boşluğuna hizalandı; böylece geniş ekranda içerik kolonundan taşmıyor, dar ekranda kenar boşluğunu koruyor.
+7. İstenen: Ana sayfadaki üç makalenin hemen altına üç makale daha eklenmesi. Elde edilen: JavaScript'e ilk adım, erişilebilir arayüzler ve Git ile ekip çalışması kartları eklendi; grid sıralamasıyla ikinci satırda görünüyor ve arama kapsamına dahil.
+8. İstenen: Site markasının “Bartın Üniversitesi kulüpleri,” olarak değiştirilip ortalanması ve Etkinlikler sayfasına 12 article eklenmesi. Elde edilen: Marka üç sayfada güncellendi ve ortalandı; Etkinlikler sayfasına 12 yeni kart eklendi (toplam 15), arama kapsamına dahil edildi.
